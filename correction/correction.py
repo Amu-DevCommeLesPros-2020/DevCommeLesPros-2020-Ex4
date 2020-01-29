@@ -3,7 +3,8 @@
 For each depot name found in depots.txt:
 - clones the repo.
 - invokes 'make build/libliste.a'.
-- links test.o with libliste.a into a program test.
+- invokes 'make build/libgroupe.a'.
+- links test.o with libliste.a and libgroupe.a into a program test.
 - prints the return code of test or a negative value if an earlier error occured:
     - -1: failed to clone the repo.
     - -3: failed to compile.
@@ -36,9 +37,9 @@ with open('depots.txt') as remote_depot_names:
                     is None:
                 raise RuntimeError('-1')
 
-           # Compile libliste.a and link with main.o.
-            if os.system('cd ' + local_depot_path + ' && make build/libliste.a') != 0 or \
-               os.system('gcc main.o -L ' + local_depot_path + '/build -l liste -o ' + local_depot_path + \
+            # Compile libliste.a and link with main.o.
+            if os.system('cd ' + local_depot_path + ' && make build/libliste.a && make build/libgroupe.a') != 0 or \
+               os.system('gcc main.o -L ' + local_depot_path + '/build -l liste -l groupe -o ' + local_depot_path + \
                          '/build/test'):
                 raise RuntimeError('-3')
 
