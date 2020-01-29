@@ -1,17 +1,19 @@
-![](https://github.com/thierryseegers/DevCommeLesPros-2020-Ex3/workflows/Test%20master/badge.svg)
+![](https://github.com/thierryseegers/DevCommeLesPros-2020-Ex4/workflows/Test%20master/badge.svg)
 
-# DevCommeLesPros-2020-Ex3
+# DevCommeLesPros-2020-Ex4
 
-Modèle de départ pour exercices d'introduction au travail par équipe avec github et intégration continue.
+Modèle de départ pour exercices de synthèse du cours.
 
 ## Instructions de départ
 
 Ces intructions présupposent que vous avez déjà suivi les instructions du [premier exercice](https://github.com/thierryseegers/DevCommeLesPros-2020-Ex1) pour la création de compte et l'installation des programmes et extensions nécéssaires.
 
-Pour cet exercice, vous devez travailler en binôme sur un même dépôt. Choisissez qui du binôme créera le dépôt. Par la suite, ce même dépôt sera cloné par les deux membres du binôme.
+Pour cet exercice, vous devez travailler en binôme sur un même dépôt.
+Choisissez qui du binôme créera le dépôt.
+Par la suite, ce même dépôt sera cloné par les deux membres du binôme.
 
 Pour créer le dépôt (un membre du binôme):
-1. Créez votre dépôt sur github.com en utilisant ce dépôt-ci (https://github.com/thierryseegers/DevCommeLesPros-2020-Ex3) comme modèle.
+1. Créez votre dépôt sur github.com en utilisant ce dépôt-ci (https://github.com/thierryseegers/DevCommeLesPros-2020-Ex4) comme modèle.
     - Suivez ces instructions: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template.
     - Choisissez l'option `Private` à l'étape 5.
 1. Ajoutez le professeur comme collaborateur à votre dépôt.
@@ -23,7 +25,7 @@ Pour créer le dépôt (un membre du binôme):
 Pour cloner le dépôt (deux membres du binôme):
 1. Clonez le dépôt vers votre espace de travail local.
     - Suivez ces instructions: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository
-    - Attention à ne pas cloner https://github.com/thierryseegers/DevCommeLesPros-2020-Ex3 mais bien votre dépôt nouvellement créé.
+    - Attention à ne pas cloner https://github.com/thierryseegers/DevCommeLesPros-2020-Ex4 mais bien votre dépôt nouvellement créé.
 1. Lancez Visual Studio Code.
     - À l'invite de commandes:
         - `> cd [nom de votre dépôt]`
@@ -45,11 +47,12 @@ Vous devrez:
 1. Complétez le fichier `makefile`:
     - Complétez les cibles déjà définies.
     - Ajoutez d'autres cibles à votre guise.
-1. Implémentez correctement toutes les fonctions de la bibliothèque logicielle `liste` pour que finalement le programme `test` affiche `87/87` et retourne `0`.
+1. Implémentez correctement toutes les fonctions des bibliothèques logicielles `liste` et `groupe` pour que finalement le programme `test` affiche `36/36` et retourne `0`.
 
 Il vous est permis: 
 - De modifier le fichier `makefile`.
 - De modifier le fichier `lib/liste.c` afin d'implémenter les fonctions qu'il contient.
+- De modifier le fichier `lib/groupe.c` afin d'implémenter les fonctions qu'il contient.
 - De modifier le fichier `test/main.c` pour activer le plus de tests possible.
 
 En tout temps:
@@ -63,11 +66,11 @@ Chacun des membres du binôme devra suivre ces instructions au moins une fois.
 1. Créez une nouvelle branche qui servira de branche de travail pour réparer une première suite de tests.
     - `> git branch [nom de la branche]`
     - `> git checkout [nom de la branche]`
-    - Exemple: `> git branch implementation-l_make_node`, `> git checkout implementation-l_make_node`.
+    - Exemple: `> git branch implementation-l_make_node`, `> git checkout implementation-g_friends`.
 1. Au fur et à mesure de vos modifications au code, intégrez-les au dépôt local avec une description des modifications apportées.
     - `> git add [fichiers]`
     - `> git commit -m "Description des modifications apportées"`
-    - Exemple: `> git add lib/liste.c`, `> git commit -m "Passe les tests pour l_make_node."`
+    - Exemple: `> git add lib/groupe.c`, `> git commit -m "Passe les tests pour g_friends."`
 1. Périodiquement, publiez votre branche de votre dépôt local à votre dépôt sur github.com.
     - `> git push origin [nom de la branche]`
     - Exemple: `> git push origin implementation-l_make_node`.
@@ -88,20 +91,20 @@ Chacun des membres du binôme devra suivre ces instructions au moins une fois.
 Avec la commande `> git log --all --decorate --graph --pretty=format:"%ar (%an) %s""`, l'historique de votre travail devrait au fil du temps ressembler à ceci (lire du bas vers le haut):
 
 ```
-*   1 hour ago (origin/master, origin/HEAD, master) Merge pull request #4 from MickeyMouse/implementation-l_length
+*   1 hour ago (origin/master, origin/HEAD, master) Merge pull request #4 from MickeyMouse/implementation-g_open-g_size
 |\
-| * 3 hours ago (DonalDuck) Passe tout les tests de l_length.
-| * 4 hours ago (DonalDuck) Passe le test l_length quand la liste est longe de zéro ou une node.
+| * 3 hours ago (DonalDuck) Passe les premiers tests de g_open et g_size.
+| * 4 hours ago (DonalDuck) Implémentation de g_open et g_size.
 |/
-*   1 day ago Merge pull request #3 from MickeyMouse/implementation-l_make_node
+*   1 day ago Merge pull request #3 from MickeyMouse/copie-libliste-exercice-3
 |\
-| * 1 day ago (Donald Duck) Passe les tests de l_make_node.
+| * 1 day ago (Donald Duck) Copié code de libliste de l'exercice 3.
 |/
 *   2 days ago (Mickey Mouse) Merge pull request #2 from MickeyMouse/reparation-makefile
 |\
 | * 2 days ago (Mickey Mouse) Peut invoquer check pour lancer le programme de test.
 | * 2 days ago (Mickey Mouse) Peut compiler, lancer et déboguer le programme test.
-| * 2 days ago (Mickey Mouse) Peut compiler la bibliothèque libliste.a.
+| * 2 days ago (Mickey Mouse) Peut compiler les bibliothèques libliste.a et libgroupe.a.
 |/
 *   3 days ago (Donald Duck) Merge pull request #1 from MickeyMouse/correction-URL
 |\
@@ -116,12 +119,13 @@ Remarquez que les deux collaborateurs contribuent au même dépôt.
 
 Voyez les indications données dans le [premier exercice](https://github.com/thierryseegers/DevCommeLesPros-2020-Ex1#jai-un-probl%C3%A8me-) à ce sujet.
 
-## Correction
+## Évaluation
 
 Dans le répertoire `correction`, vous trouverez le script que le professeur utilisera pour automatiser une première partie du processus de correction.
 Pour une liste de dépôts donnée dans `correction/depots.txt`, le script:
  - clone le dépôt.
  - invoque `make build/libliste.a`.
+ - invoque `make build/libgroupe.a`.
  - lie cette bibliothèque avec le fichier objet produit par une pré-compilation du fichier `test/main.c` original.
  - lance le programme.
  - affiche le résultat de la fraction du nombre de tests réussis sur le nombre de tests exécutés.
