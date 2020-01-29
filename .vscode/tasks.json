@@ -14,7 +14,7 @@
             "problemMatcher": "$gcc",
             "presentation": {
                 "reveal": "always",
-                "panel": "new"
+                "panel": "shared"
             }
         },
         {
