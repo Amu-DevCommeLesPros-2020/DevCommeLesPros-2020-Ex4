@@ -49,7 +49,8 @@ Vous devrez:
     - Ajoutez d'autres cibles à votre guise.
 1. Implémentez correctement toutes les fonctions des bibliothèques logicielles `liste` et `groupe` pour que finalement le programme `test` affiche `36/36` et retourne `0`.
 
-Il vous est permis: 
+Il vous est permis:
+- De modifier le fichier `README.md`.
 - De modifier le fichier `makefile`.
 - De modifier le fichier `lib/liste.c` afin d'implémenter les fonctions qu'il contient.
 - De modifier le fichier `lib/groupe.c` afin d'implémenter les fonctions qu'il contient.
@@ -66,14 +67,14 @@ Chacun des membres du binôme devra suivre ces instructions au moins une fois.
 1. Créez une nouvelle branche qui servira de branche de travail pour réparer une première suite de tests.
     - `> git branch [nom de la branche]`
     - `> git checkout [nom de la branche]`
-    - Exemple: `> git branch implementation-l_make_node`, `> git checkout implementation-g_friends`.
+    - Exemple: `> git branch implementation-g_friends`, `> git checkout implementation-g_friends`.
 1. Au fur et à mesure de vos modifications au code, intégrez-les au dépôt local avec une description des modifications apportées.
     - `> git add [fichiers]`
     - `> git commit -m "Description des modifications apportées"`
     - Exemple: `> git add lib/groupe.c`, `> git commit -m "Passe les tests pour g_friends."`
 1. Périodiquement, publiez votre branche de votre dépôt local à votre dépôt sur github.com.
     - `> git push origin [nom de la branche]`
-    - Exemple: `> git push origin implementation-l_make_node`.
+    - Exemple: `> git push origin implementation-g_friends`.
 1. Lorsqu'une suite de tests est réparée, ouvrez un "Pull Request" sur github.com pour fusionner la branche de travail à la branche `master`.
     - Suivez ces instructions: https://help.github.com/en/desktop/contributing-to-projects/creating-a-pull-request
     - Décrivez les bénéfices apportés par ce Pull Request en suivant les suggestions du modèle ("Modification(s) apportée(s)", "Problème(s) résolu(s)", "Vérification(s) et test(s)").
