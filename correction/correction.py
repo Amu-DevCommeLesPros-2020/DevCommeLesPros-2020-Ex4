@@ -37,9 +37,9 @@ with open('depots.txt') as remote_depot_names:
                     is None:
                 raise RuntimeError('-1')
 
-            # Compile libliste.a and link with main.o.
+            # Compile libliste.a and libgroupe.a and link with main.o.
             if os.system('cd ' + local_depot_path + ' && make build/libliste.a && make build/libgroupe.a') != 0 or \
-               os.system('gcc main.o -L ' + local_depot_path + '/build -l liste -l groupe -o ' + local_depot_path + \
+               os.system('gcc main.o -L ' + local_depot_path + '/build  -l groupe -l liste -o ' + local_depot_path + \
                          '/build/test'):
                 raise RuntimeError('-3')
 
