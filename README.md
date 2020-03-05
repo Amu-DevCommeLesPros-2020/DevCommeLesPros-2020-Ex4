@@ -46,6 +46,8 @@ Vous devrez:
 1. Modifier l'URL en tête de ce document pour refléter l'URL de votre dépôt.
 1. Complétez le fichier `makefile`:
     - Complétez les cibles déjà définies.
+        - La cible `check` doit dépendre de la cible `build/test` et doit invoquer le programme de test.
+        - **Il est impératifs que les cibles `build/libliste.a`, `build/test` et `check` soient définies pour la bonne exécution de cet exercice.**
     - Ajoutez d'autres cibles à votre guise.
 1. Implémentez correctement toutes les fonctions des bibliothèques logicielles `liste` et `groupe` pour que finalement le programme `test` affiche `36/36` et retourne `0`.
 
@@ -78,6 +80,15 @@ Chacun des membres du binôme devra suivre ces instructions au moins une fois.
 1. Lorsqu'une suite de tests est réparée, ouvrez un "Pull Request" sur github.com pour fusionner la branche de travail à la branche `master`.
     - Suivez ces instructions: https://help.github.com/en/desktop/contributing-to-projects/creating-a-pull-request
     - Décrivez les bénéfices apportés par ce Pull Request en suivant les suggestions du modèle ("Modification(s) apportée(s)", "Problème(s) résolu(s)", "Vérification(s) et test(s)").
+1. Attendez que le service d'Intégration Continue lance un compilation de votre base de code et le test.
+    - Vous devriez voir une «fenêtre» apparaître comme celle-ci : 
+    ![Intégration Conitnue enclenchée](https://user-images.githubusercontent.com/1580647/75868664-a806f900-5e08-11ea-8fd5-cc1df9f6ca42.png)
+1. Assurez-vous que le résultat de la compilation et du test automatique par le service d'Intégration Continu soit positif!
+    - La fenêtre précédente devrait devenir comme celle-ci :
+    ![Intégration Conitnue réussie](https://user-images.githubusercontent.com/1580647/75868675-b05f3400-5e08-11ea-93b1-87756c4dc80f.png)
+1. Si le résultat échoue, vous devez réparer le problème sur votre branche dans votre dépôt local et apporter les modifications nécéssaires.
+    - Si la fenêtre vous montre ceci, **vous ne devez pas fusionner votre branche** :
+    ![Intégration Conitnue échoue](https://user-images.githubusercontent.com/1580647/75869715-421b7100-5e0a-11ea-81b1-50854cc01c7b.png)
 1. Demander à votre co-équipier(ère) de passer en revue vos modifications, de suggérer des améliorations si besoin est et, ultimement, d'approuver.
     - Suivez ces instructions pour demander une revue: https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/requesting-a-pull-request-review
     - Suivez ces instructions pour faire une revue: https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request
